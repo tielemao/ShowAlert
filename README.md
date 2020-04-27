@@ -43,7 +43,7 @@
 `flask run -h 主机ip -P 端口`
 * 例：
 ```bash
-(venv) D:\Code\ShowAlertLog\showlog>flask run -h 127.0.0.1 -p 5000
+(venv) D:\Code\ShowAlert\showlog>flask run -h 127.0.0.1 -p 5000
  * Serving Flask app "showlog.py"
  * Environment: production
    WARNING: Do not use the development server in a production environment.
@@ -113,7 +113,7 @@
 * [x] Fix TypeError: 'str' does not support the buffer interface
 
   ```bash
-  File  "/home/wuweizeng/ShowAlertLog/showlog/parse.py", line 24, in log_parse
+  File  "/opt/ShowAlert/showlog/parse.py", line 24, in log_parse
       new_content = content2.replace("#n#", '\n')
   ```
 
@@ -154,7 +154,7 @@
    
      location /static {
           # handle static files directly, without forwarding to the application
-          alias /home/wuweizeng/ShowAlertLog/showlog/static;
+          alias /opt/ShowAlertLog/showlog/static;
           expires 30d;
       }   
   ```
