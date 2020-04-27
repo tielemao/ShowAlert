@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h3>【 ALL URGENCY 】全部Urgency级别的报警信息，点击【URGENCY】按钮刷新</h3>
+    <div style="position:relative; width:1200px; height:720px; overflow: auto">
+        <ul class="list-group">
+            <ol>
+            {% for row in res %}
+                <li class="list-group-item-danger" style="word-wrap:break-word;word-break:break-all;">{{ row | replace('DROP','')}}</li>
+            {% endfor %}
+            </ol>
+        </ul>
+    </div>
+{% endblock %}

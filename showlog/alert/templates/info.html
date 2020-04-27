@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <ul class="list-group">
+        <ol>
+        {% for row in res %}
+            <li class="list-group-info">{{ row | replace('DROP','')}}</li>
+        {% endfor %}
+        </ol>
+    </ul>
+{% endblock %}

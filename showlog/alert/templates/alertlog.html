@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <ul class="list-group">
+        <ol>
+        {% for row in res %}
+            <li class="list-group-item-danger">{{ row | replace('DROP','')}}</li>
+        {% endfor %}
+        </ol>
+    </ul>
+{% endblock %}
+

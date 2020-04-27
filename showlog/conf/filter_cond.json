@@ -1,0 +1,12 @@
+{
+  "cond": [
+    {
+      "example": [
+        "web1",
+        "www.tielemao.com",
+        "index.php",
+        "500"
+      ]
+    }
+  ]
+}

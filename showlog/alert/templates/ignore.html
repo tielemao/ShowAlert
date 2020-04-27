@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h2>【 忽略展示 】</h2>
+    <hr>
+    <p style="font-family:courier">忽略过滤的报警如下</p>
+    <ul class="list-group">
+        {% for row in res %}
+            <li class="list-group-info">{{ row }}</li>
+        {% endfor %}
+    </ul>
+
+    <p style="font-family:courier">下方添加忽略展示以空格分隔的过滤关键词，关键词不能为空。</p>
+    <p style="font-family:courier"> 当一行报警信息log中同时存在这些关键词的话，将会在flush页面忽略展示。</p>
+    <hr>
+    <form method=post enctype="multipart/form-data">
+        <p style="font-family:courier">过滤Key name,方便区分用途，一般使用hostname，不能为空</p>
+        <input type="text" name="keyword_key" value="keyword_key">
+        <hr>
+        <p style="font-family:courier">过滤用的关键词（value）列表，以空格分隔</p>
+        <p style="font-family:courier">例：输入"ctc_devel tccrona" </p>
+        <input type="text" name="keyword_list" value="keywprd_list">
+        <hr>
+        <input type="submit" value="添加忽略展示">
+    </form>
+
+{% endblock %}

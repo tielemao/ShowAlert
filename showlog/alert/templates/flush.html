@@ -1,0 +1,18 @@
+<meta http-equiv="refresh" content="20">
+
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h3>【 FLUSH Critical 】每隔20秒自动刷新页面获取最新20条Urgency + Critical级别的报警信息</h3>
+	<h3>【注意】 此页为倒序显示，排在第一的为最新的报警信息 </h3>
+    <div style="position:relative; width:1200px; height:720px; overflow: auto">
+        <ul class="list-group">
+            <ol>
+                {% for row in res %}
+                    <li class="list-group-item-heading" style="word-wrap:break-word;word-break:break-all;">{{ row | replace('DROP','')}}</li>
+                {% endfor %}
+            </ol>
+        </ul>
+    </div>
+{% endblock %}
+
